@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "prettier": "^2.8.7",
+    "prettier-plugin-prisma": "^4.10.0",
+    "prettier-plugin-svelte": "^2.10.0"
+  }
 }
