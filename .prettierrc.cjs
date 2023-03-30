@@ -1,3 +1,3 @@
-const config = require('./src/base')
+const { baseConfig } = require('./index.cjs')
 
-module.exports = config
+module.exports = baseConfig
