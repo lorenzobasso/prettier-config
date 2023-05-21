@@ -30,4 +30,4 @@ const nestjsConfig = {
 	importOrder: ['^@nestjs/(.*)$', '^@prisma/(.*)$', '^@?\\w', '^[./]'],
 }
 
-module.exports = { baseConfig, nestjsConfig, svelteConfig }
+module.exports = { baseConfig, nestjsConfig, svelteConfig, tsConfig, reactConfig }
