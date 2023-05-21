@@ -9,20 +9,23 @@ const baseConfig = {
 	plugins: ['@trivago/prettier-plugin-sort-imports'],
 	pluginSearchDirs: ['.'],
 	importOrder: ['^@', '^\\w', '^[./]'],
-	importOrderParserPlugins: ['typescript', 'decorators-legacy'],
 	importOrderSeparation: true,
 	importOrderSortSpecifiers: true,
 }
 
+const reactConfig = { ...baseConfig }
+
+const tsConfig = { ...baseConfig, importOrderParserPlugins: ['typescript', 'decorators-legacy'] }
+
 const svelteConfig = {
-	...baseConfig,
+	...tsConfig,
 	plugins: [...baseConfig.plugins, 'prettier-plugin-svelte'],
 	overrides: [{ files: '*.svelte', options: { parser: 'svelte' } }],
 	importOrder: ['^@svelte', '^@', '^\\w', '^[$]\\w', '^[./]'],
 }
 
 const nestjsConfig = {
-	...baseConfig,
+	...tsConfig,
 	plugins: [...baseConfig.plugins, 'prettier-plugin-prisma'],
 	importOrder: ['^@nestjs/(.*)$', '^@prisma/(.*)$', '^@?\\w', '^[./]'],
 }
